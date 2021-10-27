@@ -60,8 +60,8 @@ body {
     font-weight: 400;
 }
 
-.login-article{
-    margin: 50px 0px 0px 50px;
+.login-article, .register-article{
+    margin: 10px 0px 0px 30px;
 }
 
 input{
