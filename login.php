@@ -14,7 +14,7 @@
                             <p class="text-logo text-red">Doplas</p>
                             <h1 class="header-1">Login</h1>
                             <p class="paragraph text-secondary">See your growth and get consulting support!</p>
-                            <form class="mt-5">
+                            <form class="mt-5" action="proses_login.php" method="post">
                                 <div class="form-group mt-3">
                                     <label class="paragraph" for="username">Username</label>
                                     <input type="text" class="form-control form-control-lg rounded-pill mt-2" id="username" aria-describedby="username" name="username" placeholder="Username"
@@ -39,7 +39,7 @@
                                     <input type="submit" class="form-control form-control-lg rounded-pill mt-2 bg-red text-light" value="Login">
                                 </div>
                             </form>
-                            <p class="mt-2">Not registered ? <a href="#">Create an Account</a></p>
+                            <p class="mt-2">Not registered ? <a href="register.php">Create an Account</a></p>
                         </article>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">

@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['auth'])) header("Location: login.php");
+
+$username = "";
+if(isset($_SESSION['username'])) $username = $_SESSION['username'];
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +20,8 @@
                 <article class="mt-5 mx-5">
                     <p class="text-logo text-red">Doplas</p>
                     <div class="d-flex justify-content-between mt-3">
-                        <p>Welcome Muhammad Rezki Ananda</p>
-                        <a href="#">
+                        <p>Welcome <?= $username ?></p>
+                        <a href="logout.php">
                             <p class="float-start mt-1 ">Logout</p>
                             <img class="img-fluid ms-2" src="assets/images/logout.png" width="30px">
                         </a>
@@ -22,7 +31,7 @@
                     <center>
                         <img class="img-fluid" src="assets/images/greeting.png" width="400px">
                     </center>
-                    <h4 class="text-center text-bold text-dark">Cooming soon</h4>
+                    <h4 class="text-center text-bold text-dark">Coming soon</h4>
                 </article>
             </div>
         </section>
