@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (isset($_SESSION['logged_in'])) {
+    if ($_SESSION['logged_in'] == true) {
+        header("Location: index.php");
+        exit();
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +23,7 @@
                             <p class="text-logo text-red">Doplas</p>
                             <h1 class="header-1">Register</h1>
                             <p class="paragraph text-secondary">See your growth and get consulting support!</p>
-                            <form class="mt-5" action="proses_register.php" method="post">
+                            <form class="mt-5" action="transactions/store_register.php" method="post">
                                 <div class="form-group mt-3">
                                     <label class="paragraph" for="name">Name</label>
                                     <input type="text" class="form-control form-control-lg rounded-pill mt-2" id="name" aria-describedby="name" name="name" placeholder="name"
